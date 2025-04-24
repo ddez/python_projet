@@ -37,9 +37,15 @@ munitions = {
 # Calcul du stock total disponible en fonction des ratios
 # On va multiplier le ratio inverse pour avoir des stocks cohérents
 def generate_stock(total_stock):
-    stock = {}
+    stock = {
+        "id": None,
+        "munition": "",
+        "quantity": 0
+        # "price": 0.0,
+        # "total_price": 0.0,
+    }
     total_ratio = sum(1 / ratio for ratio in munitions.values())
-    
+    i=0
     for munition, ratio in munitions.items():
         # Calculer le "poids" de chaque munition basé sur son ratio inverse
         poids = (1 / ratio) / total_ratio
@@ -51,14 +57,21 @@ def generate_stock(total_stock):
         quantity = min(quantity, MAX_QUANTITY_PER_ITEM)
         
         # Ajouter au stock
-        stock[munition] = quantity
+        stock["id"] = str(i)
+        stock["munition"] = munition
+        stock["quantity"] = quantity
+        i += 1
+        # stock["price"] = prices[munition]
+        # stock["total_price"] = prices[munition] * quantity
+
+
         
     return stock
 
 
-# # Générer un stock réaliste
-# stock_munitions = generate_stock(TOTAL_STOCK)
+# Générer un stock réaliste
+stock_munitions = generate_stock(TOTAL_STOCK)
 
-# # Afficher le stock généré
-# for munition, quantity in stock_munitions.items():
-#     print(f"{munition}: {quantity} unités")
+# Afficher le stock généré
+for munition in stock_munitions.items():
+    print(f"{munition["id"]} | {munition["munition"]} |  QTE: {munition["quantity"]} ")

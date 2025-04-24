@@ -1,6 +1,8 @@
+import data
 
 def main():
-    pass
+    base = data.get_data()
+    print(base)
 
 if __name__ == '__main__':
     main()

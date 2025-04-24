@@ -5,6 +5,8 @@ TP dans le cadre de l'apprentissage de python
 >[!info] Initialisation
 >exécuter le fichier init_projet.py
 
+>[!info] requirements "auto"
+>``pip freeze > requirements.txt``
 ## Fonctionnalités
 
 - Ajouter
