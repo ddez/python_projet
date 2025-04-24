@@ -47,7 +47,7 @@ ID ; Type ; qte
 		- [ ] gestion erreurs
 		- [ ] log
 	- [ ] Retirer
-		- [ ] fonction
+		- [x] fonction
 		- [ ] gestion erreurs
 		- [ ] log
 	- [ ] Lister
