@@ -35,8 +35,9 @@ ID ; Type ; qte
 
 ## Roadmap
 
-- [ ] générer des données
+- [ ] générer des données:
+	- [x] fonction pour générer des données de test
 - [ ] fonction chargement des données
 - [ ] fonction lister
 - [ ] fonction Sauvegarder les données
-- [ ] 
+- [ ] gérer les paramètres de l'appli (rassembler dans un json?)
