@@ -94,7 +94,6 @@ def changer_chemin():
     Change le chemin du fichier de données.
     """
     print("Changement du chemin du fichier de données...")
-    # Implémentez la logique pour changer le chemin ici
 def changer_qte_max():
     """
     Change la quantité maximale par article.
