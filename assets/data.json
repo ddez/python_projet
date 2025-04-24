@@ -1,0 +1,127 @@
+[
+    {
+        "id": "0",
+        "munition": "9mm",
+        "quantity": 1000
+    },
+    {
+        "id": "1",
+        "munition": "5.56mm NATO",
+        "quantity": 681
+    },
+    {
+        "id": "2",
+        "munition": "7.62mm NATO",
+        "quantity": 454
+    },
+    {
+        "id": "3",
+        "munition": "12 Gauge",
+        "quantity": 908
+    },
+    {
+        "id": "4",
+        "munition": "0.40 S&W",
+        "quantity": 778
+    },
+    {
+        "id": "5",
+        "munition": "0.22 LR",
+        "quantity": 1000
+    },
+    {
+        "id": "6",
+        "munition": "10mm Auto",
+        "quantity": 545
+    },
+    {
+        "id": "7",
+        "munition": "44 Magnum",
+        "quantity": 363
+    },
+    {
+        "id": "8",
+        "munition": "300 Win Mag",
+        "quantity": 272
+    },
+    {
+        "id": "9",
+        "munition": "9mm Luger",
+        "quantity": 991
+    },
+    {
+        "id": "10",
+        "munition": "223 Remington",
+        "quantity": 727
+    },
+    {
+        "id": "11",
+        "munition": "357 Magnum",
+        "quantity": 454
+    },
+    {
+        "id": "12",
+        "munition": "12 Gauge Slug",
+        "quantity": 389
+    },
+    {
+        "id": "13",
+        "munition": "40mm Grenade",
+        "quantity": 155
+    },
+    {
+        "id": "14",
+        "munition": "RPG-7 Rocket",
+        "quantity": 90
+    },
+    {
+        "id": "15",
+        "munition": "M72 LAW Rocket",
+        "quantity": 99
+    },
+    {
+        "id": "16",
+        "munition": "AT4 Rocket",
+        "quantity": 77
+    },
+    {
+        "id": "17",
+        "munition": "TOW Missile",
+        "quantity": 27
+    },
+    {
+        "id": "18",
+        "munition": "Hellfire Missile",
+        "quantity": 21
+    },
+    {
+        "id": "19",
+        "munition": "Javelin Missile",
+        "quantity": 18
+    },
+    {
+        "id": "20",
+        "munition": "S-300 Missile",
+        "quantity": 5
+    },
+    {
+        "id": "21",
+        "munition": "V2 Rocket",
+        "quantity": 10
+    },
+    {
+        "id": "22",
+        "munition": "SCUD Missile",
+        "quantity": 7
+    },
+    {
+        "id": "23",
+        "munition": "Tomahawk Missile",
+        "quantity": 9
+    },
+    {
+        "id": "24",
+        "munition": "Nuclear Warhead",
+        "quantity": 0
+    }
+]

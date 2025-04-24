@@ -33,11 +33,23 @@ ID ; Type ; qte
   date au format ISO 8601
 
 
-## Roadmap
+## Roadmap/TODO
 
-- [ ] générer des données:
+- [x] générer des données:
 	- [x] fonction pour générer des données de test
-- [ ] fonction chargement des données
-- [ ] fonction lister
-- [ ] fonction Sauvegarder les données
-- [ ] gérer les paramètres de l'appli (rassembler dans un json?)
+- [ ] Gestion des données:
+	- [x] vérifier le fichier au lancement du programme
+	- [x] fonction pour charger les données + gestion simple des erreurs
+	- [x] Fonction pour écrire les données dans le fichiers + gestion des erreurs
+- [ ] FONCTIONS PRINCIPALES
+	- [ ] Ajouter
+	- [ ] Retirer
+	- [ ] Lister
+	- [ ] Alerte
+	- [ ] Prévision
+- [ ] FONCTIONS ANNEXES
+	- [ ] Exporter les données
+- [ ] gérer les paramètres de l'appli (rassembler dans un json? )
+	- mode verbose
+	- paramètres pour générer le jeu de données de test (TOTAL_STOCK + MAX_QUANTITY_PER_ITEM)
+- [ ] 

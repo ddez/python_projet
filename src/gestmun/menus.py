@@ -15,6 +15,12 @@ def main_menu():
         choix = input("Veuillez entrer votre choix : ") or '0'
 
         match choix:
+            case '1':
+                return "afficher_stock"
+            case '2':
+                return "ajouter_munitions"
+            case '3':
+                return "retirer_munitions"
             case '9':
                 settings_page = settings_menu()
                 if settings_page == 0:
@@ -43,7 +49,13 @@ def settings_menu():
         choix = input("Veuillez entrer votre choix : ") or '0'
 
         match choix:
+            case '1':
+                return "changer_chemin"
+            case '2':
+                return "changer_qte_max"
+            case '3':
+                return "changer_ratio"
             case '0':
                 return 0
             case _:
-                print("Menus en construction ou choix invalide, veuillez réessayer.")
+                print("Choix invalide, veuillez réessayer.")

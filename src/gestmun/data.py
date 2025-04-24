@@ -13,8 +13,14 @@ def get_data():
         return None
     
 def push_data(data):
-    with open(DATAPATH, 'w') as f:
-        json.dump(data, f, indent=4)
+    try:
+        with open(DATAPATH, 'w') as f:
+            json.dump(data, f, indent=4)
+        print("Données mises à jour avec succès.")
+        return True
+    except Exception as e:
+        print(f"Erreur lors de l'écriture dans le fichier de données : {e}")  
+        return False 
 
 def check_data():
     """
