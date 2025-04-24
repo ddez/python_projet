@@ -20,8 +20,41 @@ def ajouter_munitions():
     """
     Ajoute des munitions au stock.
     """
-    print("Ajout de munitions...")
-    # Implémentez la logique pour ajouter des munitions ici
+    print("\n----- Ajout de munitions... -----")
+    # charger le stock
+    
+    munitions = data.get_data()
+    # obtenir le prochain id
+    next_id  = max([int(munition['id']) for munition in munitions]) + 1
+    print(f"Prochain ID : {next_id}")
+    # obtenir le nom de la munition
+    nom_munition = input("Entrez le nom de la munition : ")
+    # vérifier si la munition existe déjà:
+        # si oui : on met à jour la quantité
+        # si non : on ajoute la munition
+    # vérifier si la munition existe déjà
+    for munition in munitions:
+        if munition['munition'] == nom_munition:
+            # mettre à jour la quantité
+            print(f"La munition {munition['munition']} existe déjà.")
+            print(f"Quantité actuelle : {munition['quantity']}")
+            qte_munition = int(input("Entrez la quantité à ajouter : "))
+            munition['quantity'] += qte_munition
+            break
+    else:
+        # ajouter la munition
+        qte_munition = int(input("Entrez la quantité pour cette munition : "))
+        new_munition = {
+            "id": str(next_id),
+            "munition": nom_munition,
+            "quantity": qte_munition
+        }
+        munitions.append(new_munition)  
+    # sauvegarder le stock
+    data.push_data(munitions)
+    print(f"Ajout de {qte_munition} munitions de type {nom_munition} au stock.")
+    print("------------------------------")
+    
 def retirer_munitions():
     """
     Retire des munitions du stock.

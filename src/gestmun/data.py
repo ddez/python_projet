@@ -14,8 +14,8 @@ def get_data():
     
 def push_data(data):
     try:
-        with open(DATAPATH, 'w') as f:
-            json.dump(data, f, indent=4)
+        with open(DATAPATH, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=4, ensure_ascii=False)  # ensure_ascii=False pour conserver les accents
         print("Données mises à jour avec succès.")
         return True
     except Exception as e:

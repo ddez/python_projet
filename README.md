@@ -43,7 +43,7 @@ ID ; Type ; qte
 	- [x] Fonction pour écrire les données dans le fichiers + gestion des erreurs
 - [ ] FONCTIONS PRINCIPALES
 	- [ ] Ajouter
-		- [ ] fonction
+		- [x] fonction
 		- [ ] gestion erreurs
 		- [ ] log
 	- [ ] Retirer
