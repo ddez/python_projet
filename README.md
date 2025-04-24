@@ -43,12 +43,28 @@ ID ; Type ; qte
 	- [x] Fonction pour écrire les données dans le fichiers + gestion des erreurs
 - [ ] FONCTIONS PRINCIPALES
 	- [ ] Ajouter
+		- [x] fonction
+		- [ ] gestion erreurs
+		- [ ] log
 	- [ ] Retirer
+		- [ ] fonction
+		- [ ] gestion erreurs
+		- [ ] log
 	- [ ] Lister
+		- [ ]  fonction
+		- [ ] gestion erreurs
+		- [ ] log
 	- [ ] Alerte
+		- [ ]  fonction
+		- [ ] gestion erreurs
+		- [ ] log
 	- [ ] Prévision
+		- [ ] fonction
+		- [ ] gestion erreurs
+		- [ ] log
 - [ ] FONCTIONS ANNEXES
 	- [ ] Exporter les données
+- [ ] gestion des Logs
 - [ ] gérer les paramètres de l'appli (rassembler dans un json? )
 	- mode verbose
 	- paramètres pour générer le jeu de données de test (TOTAL_STOCK + MAX_QUANTITY_PER_ITEM)
