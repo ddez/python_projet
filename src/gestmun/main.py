@@ -1,7 +1,7 @@
 import data
 import menus
 
-def afficher_stock():
+def afficher_stock(id=False,nom=True, qte=False):
     """
     Affiche le stock de munitions.
     """
@@ -9,9 +9,15 @@ def afficher_stock():
     munitions = data.get_data()
     if data:
         for munition in munitions:
-            #répeter un nombre de caratères
-            
-            print(f"{munition['munition']:<20} {munition['quantity']:<10}")
+            message = ""
+            if id:
+                message = f"{munition['id']:<5}"
+            if nom:
+                message += f"{munition['munition']:<20}"
+            if qte:
+                message += f"{munition['quantity']:<10}"
+            print(message)
+            # print(f"{munition['munition']:<20} {munition['quantity']:<10}")
     else:
         print("Aucune donnée disponible.")
     print("------------------------------")
@@ -59,8 +65,30 @@ def retirer_munitions():
     """
     Retire des munitions du stock.
     """
-    print("Retrait de munitions...")
-    # Implémentez la logique pour retirer des munitions ici
+    print("\n----- Retrait de munitions... -----")
+    # charger le stock
+    munitions = data.get_data()
+    # afficher le stock
+    afficher_stock(id=True, nom=True, qte=True) 
+    # obtenir l'id de la munition
+    id_munition = input("Entrez l'ID de la munition à retirer : ")
+    # vérifier si la munition existe
+    for munition in munitions:
+        if munition['id'] == id_munition:
+            # vérifier si la quantité est suffisante
+            qte_munition = int(input("Entrez la quantité à retirer : "))
+            if qte_munition > munition['quantity']:
+                print(f"Quantité insuffisante. Quantité actuelle : {munition['quantity']}")
+                break
+            else:
+                munition['quantity'] -= qte_munition
+                print(f"Retrait de {qte_munition} munitions de type {munition['munition']} du stock.")
+                break
+    else:
+        print("Munition non trouvée.")
+    # sauvegarder le stock
+    data.push_data(munitions)
+    print("------------------------------")
 def changer_chemin():
     """
     Change le chemin du fichier de données.
@@ -87,7 +115,7 @@ def main():
 
     match choix:
         case "afficher_stock":
-            afficher_stock()
+            afficher_stock(id=False, nom=True, qte=True)
         case "ajouter_munitions":
             ajouter_munitions()
         case "retirer_munitions":
