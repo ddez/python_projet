@@ -28,7 +28,6 @@ def main_menu():
                 else:
                     return settings_page
             case '0':
-                print("Au revoir !")
                 return 0
             case _:
                 print("Choix invalide, veuillez réessayer.")

@@ -185,26 +185,27 @@ def main():
     logger.info("Connecté")
     data.manage_data()
     verifier_stocks_faibles()
-    choix = menus.main_menu()
-    
 
-    match choix:
-        case "afficher_stock":
-            afficher_stock(id=False, nom=True, qte=True)
-        case "ajouter_munitions":
-            ajouter_munitions()
-        case "retirer_munitions":
-            retirer_munitions()
-        case "changer_chemin":
-            settings.changer_chemin()
-        case "changer_qte_max":
-            settings.changer_qte_max()
-        case "changer_ratio":
-            settings.changer_ratio()
-        case 0:
-            print("Au revoir !")
-        case _:
-            pass # C'est le menu qui gere les erreurs de choix
+    choix = -1
+    while choix != 0:
+        choix = menus.main_menu()
+        match choix:
+            case "afficher_stock":
+                afficher_stock(id=False, nom=True, qte=True)
+            case "ajouter_munitions":
+                ajouter_munitions()
+            case "retirer_munitions":
+                retirer_munitions()
+            case "changer_chemin":
+                settings.changer_chemin()
+            case "changer_qte_max":
+                settings.changer_qte_max()
+            case "changer_ratio":
+                settings.changer_ratio()
+            case 0:
+                print("Au revoir !")
+            case _:
+                pass # C'est le menu qui gere les erreurs de choix
     
     logger.info("Déconnexion")
         
