@@ -45,19 +45,18 @@ ID ; Type ; qte
 	- [ ] Ajouter
 		- [x] fonction
 		- [ ] gestion erreurs
-		- [ ] log
+		- [x] log
 	- [ ] Retirer
 		- [x] fonction
 		- [ ] gestion erreurs
-		- [ ] log
+		- [x] log
 	- [ ] Lister
 		- [x]  fonction
 		- [ ] gestion erreurs
-		- [ ] log
 	- [ ] Alerte
 		- [x]  fonction
 		- [ ] gestion erreurs
-		- [ ] log
+		- [x] log
 	- [ ] Prévision
 		- [ ] fonction
 		- [ ] gestion erreurs
