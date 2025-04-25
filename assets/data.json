@@ -2,151 +2,151 @@
     {
         "id": "0",
         "munition": "9mm",
-        "quantity": 1000,
-        "PU ref": 0.5
+        "quantity": 50,
+        "PUR": 0.5
     },
     {
         "id": "1",
         "munition": "5.56mm NATO",
         "quantity": 681,
-        "PU ref": 0.8
+        "PUR": 0.8
     },
     {
         "id": "2",
         "munition": "7.62mm NATO",
         "quantity": 454,
-        "PU ref": 1.2
+        "PUR": 1.2
     },
     {
         "id": "3",
         "munition": "12 Gauge",
         "quantity": 908,
-        "PU ref": 0.6
+        "PUR": 0.6
     },
     {
         "id": "4",
         "munition": "0.40 S&W",
         "quantity": 778,
-        "PU ref": 0.7
+        "PUR": 0.7
     },
     {
         "id": "5",
         "munition": "0.22 LR",
         "quantity": 1000,
-        "PU ref": 0.3
+        "PUR": 0.3
     },
     {
         "id": "6",
         "munition": "10mm Auto",
         "quantity": 545,
-        "PU ref": 1.0
+        "PUR": 1.0
     },
     {
         "id": "7",
         "munition": "44 Magnum",
         "quantity": 363,
-        "PU ref": 1.5
+        "PUR": 1.5
     },
     {
         "id": "8",
         "munition": "300 Win Mag",
         "quantity": 272,
-        "PU ref": 2.0
+        "PUR": 2.0
     },
     {
         "id": "9",
         "munition": "9mm Luger",
         "quantity": 991,
-        "PU ref": 0.55
+        "PUR": 0.55
     },
     {
         "id": "10",
         "munition": "223 Remington",
         "quantity": 727,
-        "PU ref": 0.75
+        "PUR": 0.75
     },
     {
         "id": "11",
         "munition": "357 Magnum",
         "quantity": 454,
-        "PU ref": 1.2
+        "PUR": 1.2
     },
     {
         "id": "12",
         "munition": "12 Gauge Slug",
         "quantity": 389,
-        "PU ref": 1.4
+        "PUR": 1.4
     },
     {
         "id": "13",
         "munition": "40mm Grenade",
         "quantity": 155,
-        "PU ref": 3.5
+        "PUR": 3.5
     },
     {
         "id": "14",
         "munition": "RPG-7 Rocket",
         "quantity": 90,
-        "PU ref": 6.0
+        "PUR": 6.0
     },
     {
         "id": "15",
         "munition": "M72 LAW Rocket",
         "quantity": 99,
-        "PU ref": 5.5
+        "PUR": 5.5
     },
     {
         "id": "16",
         "munition": "AT4 Rocket",
         "quantity": 77,
-        "PU ref": 7.0
+        "PUR": 7.0
     },
     {
         "id": "17",
         "munition": "TOW Missile",
         "quantity": 27,
-        "PU ref": 20.0
+        "PUR": 20.0
     },
     {
         "id": "18",
         "munition": "Hellfire Missile",
         "quantity": 21,
-        "PU ref": 25.0
+        "PUR": 55.0
     },
     {
         "id": "19",
         "munition": "Javelin Missile",
-        "quantity": 18,
-        "PU ref": 30.0
+        "quantity": 1,
+        "PUR": 300.0
     },
     {
         "id": "20",
         "munition": "S-300 Missile",
         "quantity": 5,
-        "PU ref": 100.0
+        "PUR": 100.0
     },
     {
         "id": "21",
         "munition": "V2 Rocket",
         "quantity": 10,
-        "PU ref": 50.0
+        "PUR": 50.0
     },
     {
         "id": "22",
         "munition": "SCUD Missile",
         "quantity": 7,
-        "PU ref": 70.0
+        "PUR": 70.0
     },
     {
         "id": "23",
         "munition": "Tomahawk Missile",
         "quantity": 9,
-        "PU ref": 60.0
+        "PUR": 60.0
     },
     {
         "id": "24",
         "munition": "Nuclear Warhead",
         "quantity": 0,
-        "PU ref": 1000.0
+        "PUR": 1000.0
     }
 ]

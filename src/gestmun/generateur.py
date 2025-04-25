@@ -54,7 +54,7 @@ def generate_stock(total_stock):
             "id": str(i),
             "munition": munition,
             "quantity": quantity,
-            "PU ref": ratio  # Prix Unitaire de Référence
+            "PUR": ratio  # Prix Unitaire de Référence
         })
         
     return stock

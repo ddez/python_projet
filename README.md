@@ -55,7 +55,7 @@ ID ; Type ; qte
 		- [ ] gestion erreurs
 		- [ ] log
 	- [ ] Alerte
-		- [ ]  fonction
+		- [x]  fonction
 		- [ ] gestion erreurs
 		- [ ] log
 	- [ ] Prévision

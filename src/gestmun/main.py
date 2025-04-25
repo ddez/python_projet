@@ -1,5 +1,7 @@
 import data
 import menus
+import logging
+
 
 def afficher_stock(id=False,nom=True, qte=False):
     """
@@ -21,7 +23,6 @@ def afficher_stock(id=False,nom=True, qte=False):
     else:
         print("Aucune donnée disponible.")
     print("------------------------------")
-
 def ajouter_munitions():
     """
     Ajoute des munitions au stock.
@@ -60,7 +61,6 @@ def ajouter_munitions():
     data.push_data(munitions)
     print(f"Ajout de {qte_munition} munitions de type {nom_munition} au stock.")
     print("------------------------------")
-    
 def retirer_munitions():
     """
     Retire des munitions du stock.
@@ -89,6 +89,42 @@ def retirer_munitions():
     # sauvegarder le stock
     data.push_data(munitions)
     print("------------------------------")
+    verifier_stocks_faibles()  # Vérifie les stocks faibles après retrait
+def verifier_stocks_faibles():
+    """
+    Vérifie si des munitions sont en quantité faible en tenant compte de leur PUR (prix unitaire de référence).
+    Les seuils sont calculés comme suit:
+    - Munitions à PUR très élevé (>500€) : seuil = 1
+    - Munitions à PUR élevé (50-500€) : seuil = 4
+    - Munitions à PUR moyen (5-50€) : seuil = 10
+    - Munitions à PUR faible (<5€) : seuil = 100
+    """
+    print("\n----- ALERTE STOCKS FAIBLES -----")
+    munitions = data.get_data()
+    stocks_faibles = False
+    
+    for munition in munitions:
+        # Définir le seuil en fonction du pur/prix
+        pur = float(munition.get('PUR', 0))
+        
+        if pur >= 500:
+            seuil = 1  
+        elif 50 <= pur < 500:
+            seuil = 4
+        elif 5 <= pur < 50:
+            seuil = 10
+        else:
+            seuil = 100
+            
+        if munition['quantity'] <= seuil:
+            stocks_faibles = True
+            print(f"⚠️ ATTENTION: {munition['munition']} - Quantité: {munition['quantity']}")
+            print(f"    Seuil minimal: {seuil} (PU.ref: {pur}€)")
+    
+    if not stocks_faibles:
+        print("Aucun stock faible détecté.")
+    print("--------------------------------")
+
 def changer_chemin():
     """
     Change le chemin du fichier de données.
@@ -109,6 +145,7 @@ def changer_ratio():
 
 def main():
     data.manage_data()  # Vérifie et gère le fichier de données
+    verifier_stocks_faibles()  # Vérifie les stocks faibles au démarrage
     choix = menus.main_menu()
     
 
