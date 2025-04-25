@@ -4,7 +4,7 @@ import random
 TOTAL_STOCK = 100000  # Le nombre total d'unités de munitions à générer
 MAX_QUANTITY_PER_ITEM = 1000  # Le nombre maximum d'unités pour chaque type de munition
 
-# Liste des munitions avec leurs ratios de prix
+# Liste des munitions avec leurs PUR (Prix Unitaire de Référence)
 munitions = {
     "9mm": 0.5,
     "5.56mm NATO": 0.8,
@@ -33,8 +33,8 @@ munitions = {
     "Nuclear Warhead": 1000.0
 }
 
-# Calcul du stock total disponible en fonction des ratios
-# On va multiplier le ratio inverse pour avoir des stocks cohérents
+# Calcul du stock total disponible en fonction des prix unitaires de référence (nommé ratio)
+# On va multiplier le PUR inverse pour avoir des stocks cohérents
 def generate_stock(total_stock):
     stock = []  # Liste pour stocker les munitions et leurs quantités
     total_ratio = sum(1 / ratio for ratio in munitions.values())
@@ -53,7 +53,8 @@ def generate_stock(total_stock):
         stock.append({
             "id": str(i),
             "munition": munition,
-            "quantity": quantity
+            "quantity": quantity,
+            "PU ref": ratio  # Prix Unitaire de Référence
         })
         
     return stock
