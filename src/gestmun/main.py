@@ -168,6 +168,16 @@ def verifier_stocks_faibles():
     print("--------------------------------")
 
 
+def prevision(munition):
+    """
+    Fonction "prevision" pour proposer de recommander des munitions si le stock est faible.
+    Cette fonction est appelée dans verifier_stocks_faibles();
+    Elle prend en paramètre une munition.
+    Elle analyse les logs et propose de commander du stock en fonction des retraits récents et des stocks actuels;       
+    """
+    pass # En construction...
+  
+
 def main():
     """
     Point d'entrée principal du programme de gestion des munitions.
