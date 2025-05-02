@@ -9,6 +9,7 @@ def main_menu():
         print("1. Afficher le stock")
         print("2. Ajouter des munitions")
         print("3. Retirer des munitions")
+        print("99. tester Db")
         print("9. Paramètres")
         print("0. Quitter")
 
@@ -27,6 +28,8 @@ def main_menu():
                     continue
                 else:
                     return settings_page
+            case '99':
+                return "test"
             case '0':
                 return 0
             case _:

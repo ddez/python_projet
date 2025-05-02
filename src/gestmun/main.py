@@ -1,4 +1,4 @@
-import data, menus, settings
+import data, menus, settings, db
 from logger_config import setup_logger
 import logging
 
@@ -212,6 +212,9 @@ def main():
                 settings.changer_qte_max()
             case "changer_ratio":
                 settings.changer_ratio()
+            case "test":
+                for munition in db.fetch_data():
+                    print(f"{munition['id']} \t {munition['munition']} \t\t\t QTE: {munition['quantity']}")
             case 0:
                 print("Au revoir !")
             case _:
